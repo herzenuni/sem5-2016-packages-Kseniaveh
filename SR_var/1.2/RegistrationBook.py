@@ -5,16 +5,16 @@ class Registration:
 
     """Создаем метод "Добавление участника", где его входные значения - имя, фамилия, возраст и почта"""
     def AddingMember(self, name, surname, age, email):
-        self.participants.append({"Participant name": name,
-                                 "participant surname": surname,
-                                 "participant age": age,
-                                 "participant email": email})
+        self.participants.append({"participant_name": name,
+                                 "participant_surname": surname,
+                                 "participant_age": age,
+                                 "participant_email": email})
     
     """Создаем метод "Удаление участника", где удаление участника идет по почте, 
     так как email - это уникаьное значение"""
     def DeleteMember(self, name):
         for participant in self.participants:
-            if participant.get("participant email") == email: # ищет совпадение с существующим email-ом 
+            if participant.get("participant_email") == email: # ищет совпадение с существующим email-ом 
                 self.participants.remove(participant) 
 
     """Создаем метод - Запись в файл"""
